@@ -265,3 +265,51 @@ ol .list-item.remove {
     transform: translateX(30vw);
     opacity: 0;
 }
+
+/* top checkbox */
+
+#switch {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label.switch-label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 70px;
+    height: 35px;
+    background: #fff;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+}
+
+label.switch-label:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 25px;
+    height: 25px;
+    background: #f6d327;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input#switch:checked+label.switch-label {
+    background: #111;
+}
+
+input#switch:checked+label.switch-label:after {
+    background: #E63E6D;
+}
+
+input#switch:checked+label.switch-label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+label.switch-label:active:after {
+    width: 80px;
+}
