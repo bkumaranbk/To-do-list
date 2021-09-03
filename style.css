@@ -177,3 +177,91 @@ body.dark .list-input {
     /* background-color: red; */
 }
 
+/* list */
+
+ol.todo-list {
+    margin-top: 50px;
+    max-height: 500px;
+    overflow-y: scroll;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+}
+
+body.dark ol.todo-list {
+    background-color: #1E1E1E;
+}
+
+ol .list-item {
+    margin: 4px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    transition: 0.5s ease-out;
+}
+
+ol .taskbar {
+    font-size: 0.8rem !important;
+    font-weight: 500;
+    color: grey;
+    margin: 0px 10px;
+    opacity: 1;
+    margin: 10px;
+}
+
+ol .taskbar div:nth-child(2) {
+    margin: 0px 10px !important;
+    transition: 0.2s ease;
+}
+
+ol .taskbar div:nth-child(2) div:hover {
+    cursor: pointer;
+    color: #4f4dde;
+}
+
+ol .taskbar div:nth-child(3):hover {
+    cursor: pointer;
+    color: crimson;
+}
+
+ol .list-item i {
+    margin: 4px;
+    font-size: 1.1rem;
+}
+
+ol .list-item:hover {
+    cursor: pointer;
+}
+
+ol .list-item:hover.list-item i.fa-times,
+ol .list-item:hover.list-item i.fa-grip-lines {
+    opacity: 1;
+}
+
+ol .list-item i.fa-times,
+ol .list-item i.fa-grip-lines {
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+ol .list-item i.fa-times {
+    color: rgba(220, 20, 60, 0.452);
+}
+
+ol .list-item i.fa-times:hover {
+    color: crimson;
+}
+
+ol .list-item i.fa-grip-lines {
+    color: grey;
+}
+
+ol .list-item i.fa-grip-lines:hover {
+    color: black;
+}
+
+ol .list-item input {
+    font-size: 1.2rem !important;
+}
+
+ol .list-item.remove {
+    transform: translateX(30vw);
+    opacity: 0;
+}
