@@ -117,3 +117,63 @@ div.list-item input[type="text"]:focus {
 }
 
 
+/* radio */
+
+.roundedTwo {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    margin: 10px auto;
+    background: #fcfff4;
+    border-radius: 50%;
+}
+
+body.dark .roundedTwo {
+    background: grey;
+}
+
+body.dark .list-input {
+    color: #f1f1f1 !important;
+}
+
+.roundedTwo label {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    cursor: pointer;
+    background-color: #f6d327;
+    background-image: linear-gradient(315deg, #f6d327 0%, #de4daa 74%);
+    border-radius: 50px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+}
+
+.roundedTwo label:after {
+    content: '';
+    width: 9px;
+    height: 5px;
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    border: 2px solid #fcfff4;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    opacity: 0.2;
+    transform: rotate(-45deg);
+}
+
+.roundedTwo label:hover::after {
+    opacity: 0.9;
+}
+
+.roundedTwo input[type=checkbox] {
+    visibility: hidden;
+}
+
+.roundedTwo input[type=checkbox]:checked+label:after {
+    opacity: 1;
+    /* background-color: red; */
+}
+
